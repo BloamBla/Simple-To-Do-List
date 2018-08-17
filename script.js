@@ -13,8 +13,8 @@ angular.module('ToDo', []).controller('todoController', ['$scope', function($sco
         $scope.todos = todosArr.filter(todosArrPart => !todosArrPart.done);
     };
 
-    $scope.clearThisGoal = function (todo) {
-        $scope.todos.splice($scope.todos.indexOf(todo), 1);
-    }
+    $scope.clearThisGoal = function ($index) {
+        $scope.todos.splice($index, 1);
+    };
 
 }]);
