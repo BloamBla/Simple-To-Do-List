@@ -1,7 +1,6 @@
 angular.module('ToDo', []).controller('todoController', ['$scope', function($scope) {
 
     $scope.todos = [
-        {title:'Build a todo app, please!!!', done:false}
     ];
 
     $scope.addToDo = function () {
@@ -10,8 +9,12 @@ angular.module('ToDo', []).controller('todoController', ['$scope', function($sco
     };
 
     $scope.clearCompleted = function () {
-        let sntces = $scope.todos;
-        $scope.todos = sntces.filter(sntce => sntce.done === false);
+        let todosArr = $scope.todos;
+        $scope.todos = sntces.filter(todosArrPart => !todosArrPart.done);
     };
+
+    $scope.clearThisGoal = function (todo) {
+        $scope.todos.splice($scope.todos.indexOf(todo), 1);
+    }
 
 }]);
