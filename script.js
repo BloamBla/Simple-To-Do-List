@@ -10,7 +10,7 @@ angular.module('ToDo', []).controller('todoController', ['$scope', function($sco
 
     $scope.clearCompleted = function () {
         let todosArr = $scope.todos;
-        $scope.todos = sntces.filter(todosArrPart => !todosArrPart.done);
+        $scope.todos = todosArr.filter(todosArrPart => !todosArrPart.done);
     };
 
     $scope.clearThisGoal = function (todo) {
