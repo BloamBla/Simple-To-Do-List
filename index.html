@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ToDo">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <script src="angular.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div ng-controller="todoController">
+        <form name="toDoList">
+            <label>Введите что вам нужно сделать:
+                <input type="text" ng-model="toDoInput">
+            </label>
+            <button ng-click="addToDo()">Add new goal</button>
+        </form>
+        <ul>
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.done">{{todo.title}}
+            </li>
+        </ul>
+        <button ng-click="clearCompleted()">Clear checked goals</button>
+    </div>
+</body>
+</html>
