@@ -1,0 +1,34 @@
+.del-button {
+    margin: 1px 0;
+}
+
+#toDoListWrap {
+    margin: 10px;
+}
+
+.input-wrap {
+    width: 400px;
+    display: block;
+}
+
+.to-do-input {
+    width: 250px;
+    display: inline;
+    padding-top: 1px;
+}
+
+.buttons-wrap {
+    margin-bottom: 20px;
+}
+
+.each-goal-li-wrap {
+    display: block;
+}
+
+.each-goal-wrap {
+    display: inline;
+}
+
+.each-goal-text-wrap {
+    display: inline;
+}
